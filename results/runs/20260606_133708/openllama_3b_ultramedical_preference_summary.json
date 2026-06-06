@@ -1,0 +1,22 @@
+{
+  "model_alias": "openllama_3b",
+  "dataset_name": "ultramedical_preference",
+  "eval_type": "preference",
+  "n_total": 50,
+  "preference_alignment_score": 0.33,
+  "pas_pct": 33.0,
+  "n_aligned_with_chosen": 16,
+  "n_aligned_with_rejected": 33,
+  "n_tied": 1,
+  "mean_rouge_chosen": 0.0357,
+  "mean_rouge_rejected": 0.0457,
+  "mean_rouge_delta": -0.0099,
+  "total_samples": 50,
+  "total_time_s": 4.964,
+  "throughput_sps": 10.072,
+  "latency_mean_s": 0.1177,
+  "latency_median_s": 0.0895,
+  "latency_p95_s": 0.2251,
+  "latency_min_s": 0.0764,
+  "latency_max_s": 0.2708
+}

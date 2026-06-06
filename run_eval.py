@@ -40,13 +40,14 @@ import yaml
 from data.loader import load_eval_dataset
 from evaluation.exact_match import score_predictions
 from evaluation.metrics import compute_metrics
+from evaluation.preference import score_preference_predictions, compute_preference_metrics
 from inference.pipeline import InferencePipeline
 from models.hf_model import HuggingFaceModel
 from results.writer import ResultsWriter
 
-
+# =============================================================================
 # Logging setup
-
+# =============================================================================
 
 logging.basicConfig(
     level=logging.INFO,
@@ -60,9 +61,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-
+# =============================================================================
 # Config helpers
-
+# =============================================================================
 
 def load_config(config_path: str) -> dict:
     """Load and return the YAML config as a nested dict."""
@@ -100,40 +101,60 @@ def resolve_models(config: dict, requested: list[str] | None) -> dict:
     return selected
 
 
-
+# =============================================================================
 # Leaderboard printer
-
+# =============================================================================
 
 def print_leaderboard(all_summaries: list[dict]) -> None:
-    """Print a formatted accuracy + latency leaderboard to stdout."""
+    """Print a formatted leaderboard to stdout, split by eval_type."""
     if not all_summaries:
         return
 
-    header = (
-        f"\n{'='*72}\n"
-        f"{'MedEval Results':^72}\n"
-        f"{'='*72}\n"
-        f"{'Model':<20} {'Dataset':<22} {'Accuracy':>10} {'Throughput':>12} {'P95 Lat':>10}\n"
-        f"{'-'*72}"
-    )
-    print(header)
+    mcq_summaries = [s for s in all_summaries if s.get("eval_type", "mcq") != "preference"]
+    pref_summaries = [s for s in all_summaries if s.get("eval_type") == "preference"]
 
-    # Sort by accuracy descending
-    for s in sorted(all_summaries, key=lambda x: x.get("accuracy", 0), reverse=True):
+    if mcq_summaries:
         print(
-            f"{s.get('model_alias',''):<20} "
-            f"{s.get('dataset_name',''):<22} "
-            f"{s.get('accuracy_pct', 0):>9.2f}% "
-            f"{s.get('throughput_sps', 0):>10.2f}/s "
-            f"{s.get('latency_p95_s', 0):>10.3f}s"
+            f"\n{'='*72}\n"
+            f"{'MedEval Results — MCQ Accuracy':^72}\n"
+            f"{'='*72}\n"
+            f"{'Model':<20} {'Dataset':<22} {'Accuracy':>10} {'Throughput':>12} {'P95 Lat':>10}\n"
+            f"{'-'*72}"
         )
+        for s in sorted(mcq_summaries, key=lambda x: x.get("accuracy", 0), reverse=True):
+            print(
+                f"{s.get('model_alias',''):<20} "
+                f"{s.get('dataset_name',''):<22} "
+                f"{s.get('accuracy_pct', 0):>9.2f}% "
+                f"{s.get('throughput_sps', 0):>10.2f}/s "
+                f"{s.get('latency_p95_s', 0):>10.3f}s"
+            )
+        print("=" * 72)
 
-    print("=" * 72 + "\n")
+    if pref_summaries:
+        print(
+            f"\n{'='*80}\n"
+            f"{'MedEval Results — Preference Alignment':^80}\n"
+            f"{'='*80}\n"
+            f"{'Model':<20} {'Dataset':<22} {'ROUGE PAS':>10} {'BERT PAS':>10} {'Combined':>10}\n"
+            f"{'-'*80}"
+        )
+        for s in sorted(pref_summaries, key=lambda x: x.get("preference_alignment_score", 0), reverse=True):
+            bert_pas = s.get("bert_pas_pct")
+            bert_str = f"{bert_pas:>9.2f}%" if bert_pas is not None else f"{'N/A':>10}"
+            print(
+                f"{s.get('model_alias',''):<20} "
+                f"{s.get('dataset_name',''):<22} "
+                f"{s.get('rouge_pas_pct', 0):>9.2f}% "
+                f"{bert_str} "
+                f"{s.get('pas_pct', 0):>9.2f}%"
+            )
+        print("=" * 80 + "\n")
 
 
-
+# =============================================================================
 # Main
-
+# =============================================================================
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -192,22 +213,29 @@ def main() -> None:
     for dataset_alias, dataset_cfg in datasets_cfg.items():
         max_samples = args.max_samples or dataset_cfg.get("max_samples")
         prompt_style: str = dataset_cfg.get("prompt_style", "mcq_4opt")
+        eval_type: str = dataset_cfg.get("eval_type", "mcq")
+        mcq_type_filter: str | None = dataset_cfg.get("mcq_type_filter")
 
         samples = load_eval_dataset(
             dataset_name=dataset_alias,
             hf_path=dataset_cfg["hf_path"],
-            split=dataset_cfg.get("split", "test"),
+            split=dataset_cfg.get("split", "train"),
             max_samples=max_samples,
             sample_fraction=dataset_cfg.get("sample_fraction"),
+            mcq_type_filter=mcq_type_filter,
             seed=global_seed,
         )
+
+        if not samples:
+            logger.warning(f"No samples loaded for '{dataset_alias}'. Skipping.")
+            continue
 
         # ---------------------------------------------------------------------
         # 3. Loop over models
         # ---------------------------------------------------------------------
         for model_alias, model_cfg in models_to_eval.items():
             logger.info(f"\n{'='*60}")
-            logger.info(f"Evaluating: {model_alias} on {dataset_alias}")
+            logger.info(f"Evaluating: {model_alias} on {dataset_alias} (eval_type={eval_type})")
             logger.info(f"{'='*60}")
 
             # 3a. Load model
@@ -222,27 +250,35 @@ def main() -> None:
                 logger.error(f"Failed to load model '{model_alias}': {exc}. Skipping.")
                 continue
 
-            # 3b. Run inference
+            # 3b. Run inference (same for both eval types)
             pipeline = InferencePipeline(
                 model=model,
                 batch_size=inference_cfg.get("batch_size", 8),
                 prompt_style=prompt_style,
             )
             predictions = pipeline.run(samples)
-
-            # 3c. Score predictions
-            predictions = score_predictions(
-                predictions,
-                extract_strategy=extract_strategy,
-            )
-
-            # 3d. Compute metrics
             latency_summary = pipeline.tracker.summary()
-            summary = compute_metrics(
-                predictions=predictions,
-                latency_summary=latency_summary,
-                dataset_name=dataset_alias,
-            )
+
+            # 3c & 3d. Score + compute metrics — branched by eval_type
+            if eval_type == "preference":
+                # Preference alignment evaluation (ROUGE-L chosen vs rejected)
+                predictions = score_preference_predictions(predictions)
+                summary = compute_preference_metrics(
+                    predictions=predictions,
+                    latency_summary=latency_summary,
+                    dataset_name=dataset_alias,
+                )
+            else:
+                # Default: MCQ exact-match accuracy
+                predictions = score_predictions(
+                    predictions,
+                    extract_strategy=extract_strategy,
+                )
+                summary = compute_metrics(
+                    predictions=predictions,
+                    latency_summary=latency_summary,
+                    dataset_name=dataset_alias,
+                )
 
             # 3e. Save outputs
             if output_cfg.get("save_per_sample", True):

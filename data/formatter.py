@@ -109,13 +109,54 @@ def format_mcq_4opt_chat(sample: dict) -> list[dict]:
     ]
 
 
+def format_open_ended(sample: dict) -> str:
+    """
+    Format an open-ended question as a plain completion prompt.
+
+    Used for base/causal models on preference or free-text datasets.
+    The model is asked to answer the medical question directly.
+    """
+    question = sample["question"]
+    return (
+        "You are a medical expert. Answer the following question accurately and concisely.\n\n"
+        f"Question: {question}\n\n"
+        "Answer:"
+    )
+
+
+def format_open_ended_chat(sample: dict) -> list[dict]:
+    """
+    Format an open-ended question as a chat message list.
+
+    Used with instruction-tuned models for preference evaluation.
+    Returns a list of message dicts for tokenizer.apply_chat_template().
+    """
+    question = sample["question"]
+
+    return [
+        {
+            "role": "system",
+            "content": (
+                "You are a medical expert. Answer questions accurately and concisely. "
+                "Provide a clear, informative response."
+            ),
+        },
+        {
+            "role": "user",
+            "content": f"{question}",
+        },
+    ]
+
+
 # =============================================================================
 # Registry
 # =============================================================================
 
 PROMPT_FORMATTERS: dict[str, Callable] = {
-    "mcq_4opt":      format_mcq_4opt,
-    "mcq_4opt_chat": format_mcq_4opt_chat,
+    "mcq_4opt":           format_mcq_4opt,
+    "mcq_4opt_chat":      format_mcq_4opt_chat,
+    "open_ended":         format_open_ended,
+    "open_ended_chat":    format_open_ended_chat,
 }
 
 

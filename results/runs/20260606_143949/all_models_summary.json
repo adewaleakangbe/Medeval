@@ -1,0 +1,126 @@
+[
+  {
+    "model_alias": "openllama_3b",
+    "dataset_name": "medqa_usmle_4opt",
+    "n_total": 1273,
+    "n_correct": 318,
+    "accuracy": 0.2498,
+    "accuracy_pct": 24.98,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 353,
+        "correct": 2,
+        "accuracy": 0.0057
+      },
+      "B": {
+        "total": 309,
+        "correct": 24,
+        "accuracy": 0.0777
+      },
+      "C": {
+        "total": 346,
+        "correct": 208,
+        "accuracy": 0.6012
+      },
+      "D": {
+        "total": 265,
+        "correct": 84,
+        "accuracy": 0.317
+      }
+    },
+    "prediction_distribution": {
+      "C": 770,
+      "A": 9,
+      "B": 109,
+      "D": 385
+    },
+    "total_samples": 1273,
+    "total_time_s": 152.788,
+    "throughput_sps": 8.332,
+    "latency_mean_s": 0.1217,
+    "latency_median_s": 0.1158,
+    "latency_p95_s": 0.1652,
+    "latency_min_s": 0.0792,
+    "latency_max_s": 0.4309
+  },
+  {
+    "model_alias": "openllama_3b",
+    "dataset_name": "ultramedical_mcq",
+    "n_total": 14918,
+    "n_correct": 4149,
+    "accuracy": 0.2781,
+    "accuracy_pct": 27.81,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 4115,
+        "correct": 475,
+        "accuracy": 0.1154
+      },
+      "B": {
+        "total": 4132,
+        "correct": 1293,
+        "accuracy": 0.3129
+      },
+      "C": {
+        "total": 4094,
+        "correct": 1837,
+        "accuracy": 0.4487
+      },
+      "D": {
+        "total": 2577,
+        "correct": 544,
+        "accuracy": 0.2111
+      }
+    },
+    "prediction_distribution": {
+      "C": 7177,
+      "B": 3993,
+      "D": 2312,
+      "A": 1436
+    },
+    "total_samples": 14918,
+    "total_time_s": 4484.74,
+    "throughput_sps": 3.326,
+    "latency_mean_s": 0.3007,
+    "latency_median_s": 0.1529,
+    "latency_p95_s": 0.5415,
+    "latency_min_s": 0.072,
+    "latency_max_s": 18.185
+  },
+  {
+    "model_alias": "openllama_3b",
+    "dataset_name": "ultramedical_preference",
+    "eval_type": "preference",
+    "n_total": 5467,
+    "rouge_pas": 0.3742,
+    "rouge_pas_pct": 37.42,
+    "rouge_n_aligned": 2032,
+    "mean_rouge_chosen": 0.0361,
+    "mean_rouge_rejected": 0.0432,
+    "mean_rouge_delta": -0.0071,
+    "bertscore_available": true,
+    "bert_pas": 0.3747,
+    "bert_pas_pct": 37.47,
+    "bert_n_aligned": 2048,
+    "mean_bert_chosen": 0.8037,
+    "mean_bert_rejected": 0.8075,
+    "mean_bert_delta": -0.0037,
+    "preference_alignment_score": 0.3744,
+    "pas_pct": 37.44,
+    "n_aligned_with_chosen": 1274,
+    "n_aligned_with_rejected": 2633,
+    "n_tied": 1548,
+    "total_samples": 5467,
+    "total_time_s": 716.824,
+    "throughput_sps": 7.627,
+    "latency_mean_s": 0.1312,
+    "latency_median_s": 0.0997,
+    "latency_p95_s": 0.2021,
+    "latency_min_s": 0.0694,
+    "latency_max_s": 10.955
+  }
+]

@@ -21,13 +21,28 @@ datasets:
     max_samples: null                           # null = use all samples; set int to limit (e.g. 100 for debugging)
     prompt_style: "mcq_4opt"                    # Maps to a formatter in data/formatter.py
 
-  # Placeholder for Phase 2 — uncomment when ready
-  # ultramedical_10pct:
-  #   hf_path: "TsinghuaC3I/UltraMedical"
-  #   split: "train"
-  #   max_samples: null
-  #   sample_fraction: 0.10                     # Use 10% of the split
-  #   prompt_style: "mcq_4opt"
+  # UltraMedical MCQ subset (5% sample)
+  # All rows are type="Exam" MCQ format with a direct 'answer' letter field.
+  # 5% of 409k = ~20,000 samples. Reduce max_samples to cap further if needed.
+  ultramedical_mcq:
+    hf_path: "TsinghuaC3I/UltraMedical"
+    split: "train"
+    sample_fraction: 0.05
+    max_samples: null
+    prompt_style: "mcq_4opt"
+    eval_type: "mcq"
+
+  # UltraMedical Preference pairs
+  # Each row has a prompt + chosen (preferred) + rejected (dispreferred) response.
+  # Metric: Preference Alignment Score (PAS) via ROUGE-L.
+  # 5% sample keeps runtime reasonable — ~5,000 pairs.
+  ultramedical_preference:
+    hf_path: "TsinghuaC3I/UltraMedical-Preference"
+    split: "train"
+    sample_fraction: 0.05
+    max_samples: null
+    prompt_style: "open_ended_chat"             # Open-ended generation prompt
+    eval_type: "preference"                     # Scored by ROUGE-L preference alignment
 
 # ---------------------------------------------------------------------------
 # Model registry

@@ -1,0 +1,48 @@
+[
+  {
+    "model_alias": "openllama_3b",
+    "dataset_name": "medqa_usmle_4opt",
+    "n_total": 50,
+    "n_correct": 11,
+    "accuracy": 0.22,
+    "accuracy_pct": 22.0,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 11,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "B": {
+        "total": 10,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "C": {
+        "total": 11,
+        "correct": 6,
+        "accuracy": 0.5455
+      },
+      "D": {
+        "total": 18,
+        "correct": 5,
+        "accuracy": 0.2778
+      }
+    },
+    "prediction_distribution": {
+      "C": 27,
+      "A": 1,
+      "B": 6,
+      "D": 16
+    },
+    "total_samples": 50,
+    "total_time_s": 7.151,
+    "throughput_sps": 6.992,
+    "latency_mean_s": 0.1652,
+    "latency_median_s": 0.1215,
+    "latency_p95_s": 0.3113,
+    "latency_min_s": 0.0962,
+    "latency_max_s": 0.3505
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "model_alias": "openllama_3b",
+  "dataset_name": "ultramedical_mcq",
+  "n_total": 36,
+  "n_correct": 8,
+  "accuracy": 0.2222,
+  "accuracy_pct": 22.22,
+  "n_extraction_failed": 0,
+  "extraction_failure_rate": 0.0,
+  "per_option_accuracy": {
+    "A": {
+      "total": 8,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "B": {
+      "total": 8,
+      "correct": 3,
+      "accuracy": 0.375
+    },
+    "C": {
+      "total": 11,
+      "correct": 4,
+      "accuracy": 0.3636
+    },
+    "D": {
+      "total": 9,
+      "correct": 1,
+      "accuracy": 0.1111
+    }
+  },
+  "prediction_distribution": {
+    "C": 19,
+    "B": 11,
+    "D": 3,
+    "A": 3
+  },
+  "total_samples": 36,
+  "total_time_s": 4.46,
+  "throughput_sps": 8.072,
+  "latency_mean_s": 0.1239,
+  "latency_median_s": 0.1239,
+  "latency_p95_s": 0.1333,
+  "latency_min_s": 0.1095,
+  "latency_max_s": 0.1344
+}

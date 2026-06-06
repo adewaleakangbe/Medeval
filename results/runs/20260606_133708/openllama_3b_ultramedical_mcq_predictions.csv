@@ -1,0 +1,180 @@
+id,question,options,answer,dataset_name,eval_type,raw_output,model_alias,prompt_style,predicted_answer,correct
+"MedMCQA,152588","During extraction of the upper first molar, the mesio buccal root is missing and is suspected to have been pushed into the maxillary sinus.
+To close a oro antral fistula which of the flaps cannot be used","{'A': 'Buccal Flap', 'B': 'Palatal Flap', 'C': 'Tongue flap', 'D': 'Mucus Flap'}",D,ultramedical_mcq,mcq,"C
+
+Question: A 20-year-old woman presents with",openllama_3b,mcq_4opt,C,False
+"MedMCQA,11718",Rokitansky Kuster Hauser syndrome ta associated with :,"{'A': 'Ovarian agenesis', 'B': 'Absent fallopian tube', 'C': 'Vaginal atresia', 'D': 'Bicornuate uterus'}",C,ultramedical_mcq,mcq,"C
+
+
+A: The correct answer is C.
+The RK",openllama_3b,mcq_4opt,C,True
+"PubMedQA,25727643","Context: Increasing endogenous acetylcholine by neostigmine decreased the ischemic cerebral injury. The off-target action on muscarinic receptor produced a variety of adverse effects and limited the clinical application on stroke.
+Context: We combined neostigmine with anisodamine and investigated the neuroprotection and mechanism.
+Context: Male Sprague-Dawley rats were subjected to middle cerebral artery occlusion. Neuroprotective action of neostigmine in combination with anisodamine at varying ratios was examined to determine the optimal combination as well as ideal therapeutic window. Potential involvement of α7 nicotinic acetylcholine receptor was examined by measuring the infarct size, the expression of proinflammatory cytokines, and the biomarkers of apoptosis in α7 nicotinic acetylcholine receptor knockout mice. A set of in vitro experiments was conducted in RAW264.7 cells to probe into potential molecular mechanisms.
+Context: The neostigmine/anisodamine combination conferred neuroprotection. The protection was most potent at a ratio of 1:500. At such a ratio, the combination increased the binding of acetylcholine to α7 nicotinic acetylcholine receptor and reduced proinflammatory cytokines. The neuroprotection was evident only in wild-type and not in α7 nicotinic acetylcholine receptor knockout mice. The combination significantly decreased the expression of Bad and Bax, and increased Bcl-2 and Bcl-xl in α7 nicotinic acetylcholine receptor wild-type mice but not in knockout mice. The combination did not affect caspase-8, cleaved caspase-8, or caspase-12.
+Does a combination of neostigmine and anisodamine protect against ischemic stroke by activating α7nAChR?","{'A': 'yes', 'B': 'no', 'C': 'maybe'}",A,ultramedical_mcq,mcq,"B. no
+
+Context: The combination of neostigmine and an",openllama_3b,mcq_4opt,B,False
+"PubMedQA,17418910","Context: To explore the apoptotic role of amylin on human mesangial cell (MC).
+Context: Primarily cultured human MCs were applied and treated with fresh amylin preparation. Human MCs were identified by the morphology and immunofluorescence staining. The apoptotic cells were determined by ultrastructure changes, TUNEL, and DNA fragmentation analysis. Propidium iodide staining and flow cytometry was employed for quantitative measurement of apoptosis.
+Context: Under the light and transmission electronic microscopy (TEM), the human MCs with condensed chromatin, plasma shrinkage, marginated nuclear chromatin or apoptotic body were observed in amylin-treated MCs. Positive TUNEL staining, hypolipoid DNA peak, and typical DNA ""ladder"" pattern were also detected in amylin-treated MCs. Quantitative analysis of the apoptotic MCs showed that human amylin induced an increase of the percentage of apoptotic cells in a dose-dependent manner. Amylin nano-scale fibrils (5-18nm) in diameter were detected in the cultured solution using negative staining under the TEM. Compared to the control, no significant changes of lactate dehydrogenase release were observed in amylin-treated MCs (P>0.05).
+Does fibrillogenic amylin evoke the apoptosis of human mesangial cells?","{'A': 'maybe', 'B': 'yes', 'C': 'no'}",B,ultramedical_mcq,mcq,"B.
+
+
+A: The answer is B.
+The question is",openllama_3b,mcq_4opt,B,True
+"PubMedQA,7847558","Context: Our purpose was to determine the diagnostic power of the T/QRS ratio of the electrocardiogram to predict fetal well-being.
+Context: In 47 fetal lambs (3 to 5 days after surgery, gestational age 123.5 +/- 3.0 days) asphyxia was induced by restriction of uterine perfusion. Fetuses were either pretreated with an adenosine transport inhibitor (n = 16) or a calcium channel blocker (n = 12) or served as controls (n = 19). Arterial oxygen content > or = 1.5 mmol/L or pH > or = 7.15 were chosen as limits for fetal well-being.
+Context: Arterial oxygen content was reduced from 3.3 (+/- 1.0) to 1.3 (+/- 0.5) mmol/L, and pH decreased to 7.03 (+/- 0.10). Mortality was 53%. Both drugs did not affect well-being, survival, or the T/QRS ratio. Maximum T/QRS ratios were reached at the peak of asphyxia. Sensitivity and specificity of the T/QRS ratio were 24.0% and 42.6% to predict hypoxemia and 25.1% and 45.3% to predict acidemia. Pearson correlation coefficients for T/QRS ratio versus oxygen content and pH were 0.169 and 0.192, respectively.
+Does the T/QRS ratio of the electrocardiogram reliably reflect well-being in fetal lambs?","{'A': 'yes', 'B': 'maybe', 'C': 'no'}",C,ultramedical_mcq,mcq,"B. maybe
+
+Context: The T/QRS ratio of the electro",openllama_3b,mcq_4opt,B,False
+"PubMedQA,19851120","Context: To test the hypothesis that in the stroke-prone spontaneously hypertensive rat (SHRSP), the pressor effect of selective dietary chloride loading depends on a positive external sodium balance.
+Context: In 43 male SHRSP fed a Japanese style diet containing a low normal amount of NaCl (0.4%), we compared the effects on telemetrically measured SBP of hydrochlorothiazide, 25 mg/kg per day, alone ('TZ', n = 11); hydrochlorothiazide combined with either KCl ('KCLTZ', 2%K, n = 10) or KHCO3 ('KBCTZ', 2%K, n = 11) and no hydrochlorothiazide ('CTL', n = 11) over a 10-week period starting at 10 weeks of age.
+Context: With either TZ or KBCTZ, SBP did not increase above baseline values. However, KCLTZ induced a sustained increase in SBP of 17 mmHg (P < 0.0001), an increase almost half of that occurring without hydrochlorothiazide (CTL), 38 mmHg (P < 0.0001). Such divergence of blood pressures with KCLTZ and KBCTZ began over the first 3 days of their administration, even while they induced similarly negative external sodium balances, a positive one occurring only in CTL. Body weight increased more without, than with, hydrochlorothiazide, but did not differ between KCLTZ and KBCTZ. Changes in SBP occurring on day 2 after treatment assignment predicted final changes.
+Is selective chloride loading pressor in the stroke-prone spontaneously hypertensive rat despite hydrochlorothiazide-induced natriuresis?","{'A': 'maybe', 'B': 'no', 'C': 'yes'}",C,ultramedical_mcq,mcq,"B. no
+
+Context: In 43 male SHRSP fed",openllama_3b,mcq_4opt,B,False
+"MedMCQA,138191",An old man presenting to the Emergency following about of prolonged vomiting with excessive haematemesis following alcohol ingestion is likely to suffer from,"{'A': 'Mallory - Wesis syndrome', 'B': 'Oesophageal varices', 'C': 'Gastric Cancer', 'D': 'Bleeding disorder'}",A,ultramedical_mcq,mcq,"C
+
+
+A: The answer is C.
+The patient is suffering",openllama_3b,mcq_4opt,C,False
+"TextBookQA,Obstentrics_Williams_7704","At a gestational age of 30 weeks, a primigravida presents with new-onset hypertension, periorbital and peripheral edema, a severe cephalalgia, a hemoglobin measurement of 9 g/dL, a platelet count below the standard reference range, and fragmented erythrocytes on peripheral blood smear. Given the absence of pre-existing systemic hypertension or hematologic disorders, which diagnosis is most plausible, with consideration of potential underlying pathophysiological mechanisms such as endothelial dysfunction, coagulopathy, and placental ischemia?","{'A': 'Autoimmune hemolytic anemia concomitant with pregnancy-induced hypertension', 'B': 'Hereditary spherocytosis with coincidental gestational hypertension', 'C': 'Sickle-cell disease with superimposed pregnancy-associated complications', 'D': 'Preeclampsia with concurrent microangiopathic hemolytic anemia'}",D,ultramedical_mcq,mcq,C. Sickle-cell disease with superimposed pregnancy-associated,openllama_3b,mcq_4opt,C,False
+"MedMCQA,113091",Which of the following is best stain for fungus:,"{'A': 'Muciramine', 'B': 'Methenamine silver', 'C': 'Alcian blue', 'D': 'Hematoxylin and eosin'}",B,ultramedical_mcq,mcq,"D
+
+
+A: The answer is D.
+The reason is that",openllama_3b,mcq_4opt,D,False
+"TextBookQA,InternalMed_Harrison_1399","In elderly patients on anticoagulant therapy, also taking antiplatelet agents, which condition might present with a palpable mass in the lower abdominal quadrants and a bruit on auscultation?","{'A': 'Hematoma of the rectus sheath', 'B': 'Diverticulitis', 'C': 'Myositis of the abdominal wall', 'D': 'Abdominal aortic aneurysm'}",D,ultramedical_mcq,mcq,"C. Myositis of the abdominal wall
+
+The correct answer is",openllama_3b,mcq_4opt,C,False
+"MedMCQA,22809",A 30-year-old man admitted for multiple injuries following an accident receives 8 units of packed RBCs (PRBCs). What is the most likely ABG finding in this patient?,"{'A': 'Metabolic alkalosis', 'B': 'Respiratory alkalosis', 'C': 'Metabolic acidosis', 'D': 'Respiratory acidosis'}",A,ultramedical_mcq,mcq,"C
+
+The correct answer is metabolic acidosis.
+
+The patient'",openllama_3b,mcq_4opt,C,False
+"MedMCQA,19555",Which of the following is not a component of young's syndrome,"{'A': 'Bronchiectasis', 'B': 'Sinusitis', 'C': 'Situs inversus', 'D': 'Obstructive azoospermia'}",C,ultramedical_mcq,mcq,"D
+
+
+A: The correct answer is D.
+Young'",openllama_3b,mcq_4opt,D,False
+"MedMCQA,124134",The ideal treatment of stenosis of sphincter of oddi is,"{'A': 'Transduodenal sphicteroplasty', 'B': 'Endoscopic sphicteroplasty', 'C': 'Choledochojejunostomy', 'D': 'Choledochoduodenostomy'}",A,ultramedical_mcq,mcq,"C
+
+
+A: The answer is C.
+The sphinct",openllama_3b,mcq_4opt,C,False
+"PubMedQA,19799033","Context: To investigate the relationship between the drug resistance of Pseudomonas aeruginosa (PA) isolated from burn patients wounds and its mobile genetic elements, including plasmid, transposon, and integron.
+Context: Thirty-two strains of PA were isolated from wounds exudate of hospitalized burn patients in Ningbo No. 2 Hospital. PA drug sensitivity was determined using GNS-448 drug sensitivity card and K-B tests. The genetic markers of plasmid, transposon and integron including traA, traF, tnpA, tnpU, merA, int I 1 were amplified by PCR and verified by gene sequencing.
+Context: Drug resistant rate of 32 PA strains to gentamicin, amikacin, cefoperazone/sulbactam, ciprofloxacin was 43.7%, 32.0%, 46.8%, 49.9%, respectively. PA drug resistant rates to piperacillin, cefotaxime, ceftazidime, cefepime, aztreonam, piperacillin/tazobactam, levofloxacin, imipenem and meropenem were all above 56.0%. Seventeen out of 32 PA strains were found to carry transposon and (or) integron genetic markers. One strain was positive for both tnpA and merA, 8 strains were positive for both merA and int I 1, 1 strain was only positive for tnpA, 2 strains were only positive for merA, and 5 strains were positive for int I 1 only.
+Do [ Relationship between drug resistance of Pseudomonas aeruginosa isolated from burn wounds and its mobile genetic elements ]?","{'A': 'yes', 'B': 'maybe', 'C': 'no'}",A,ultramedical_mcq,mcq,"B. maybe
+
+Context: The relationship between drug resistance of Pseud",openllama_3b,mcq_4opt,B,False
+"PubMedQA,20539792","Context: This study assessed the safety and efficacy of one level unilateral laminotomy bilateral decompression (ULBD) with the placement of a device for intervertebral assisted motion (DIAM) compared with one level ULBD only in elderly patients with degenerative lumbar spinal stenosis (DLSS).
+Context: A non randomized prospective analysis was performed on 16 patients who underwent one level ULBD with DIAM (Group A) and 20 patients with one level ULBD only (Group B) between February 2007 and March 2008. Radiographic imaging, visual analog scale (VAS) and MacNab outcome scale were obtained before and after surgery at a mean interval of 21 months (range 17-27 months).
+Context: The disc height, interpedicular distance, slip distance and segmental lordotic angle were similar between two groups. In the group A, there was no significant difference between the pre- and post-operative imaging in terms of the sagittal balance and disc height. Both groups showed significant improvement in the clinical outcomes. In addition, there was significantly less low-back pain in the group A than in the group B at the last follow up, while the clinical improvement of the leg pain and MacNab outcome scale showed no significant difference in the two groups. There were no major complications or DIAM associated complications.
+Do interspinous implant with unilateral laminotomy for bilateral decompression of degenerative lumbar spinal stenosis in elderly patients?","{'A': 'maybe', 'B': 'no', 'C': 'yes'}",C,ultramedical_mcq,mcq,"B. no
+
+
+A: The answer is B.
+The study",openllama_3b,mcq_4opt,B,False
+"TextBookQA,Pharmacology_Katzung_5161","A patient has been applying a neomycin-containing ointment for weeks to manage a tenacious dermatological infection. They now exhibit pruritic, erythematous, and edematous regions confined to the site of application, with no recent alterations in environmental exposures or pharmacological regimen. Which diagnosis is most congruent with these findings, considering the chronicity of topical treatment?","{'A': 'Manifestations of systemic absorption and neomycin toxicity', 'B': 'Anticipated consequences of neomycin usage over an extended duration', 'C': 'Secondary infection with a neomycin-resistant pathogen', 'D': 'Localized hypersensitivity response to neomycin'}",D,ultramedical_mcq,mcq,"C
+
+The correct answer is C.
+
+The patient has a ne",openllama_3b,mcq_4opt,C,False
+"MedMCQA,14082",A Neonate is brought with history of not having passed meconium on examination there is no anal opening but a dimple. Investigation of choice is ?,"{'A': 'X-ray erect posture', 'B': 'X-ray supine posture', 'C': 'Gastrograffin study', 'D': 'Inveogram'}",D,ultramedical_mcq,mcq,"C
+
+
+A: Gastrograffin study is the correct answer",openllama_3b,mcq_4opt,C,False
+"TextBookQA,Surgery_Schwartz_4413","In a 45-year-old male with a rapidly progressing deep neck infection post-dental extraction, poorly controlled diabetes, and CT evidence of a prevertebral space abscess, which complication is imminent if treatment is delayed, considering the anatomical pathways, potential for descending necrotizing mediastinitis, and the risk of septic thrombophlebitis of the internal jugular vein?","{'A': 'Retropharyngeal space abscess with progression to septic thrombophlebitis of the internal jugular vein', 'B': 'Isolated abscess formation confined to the prevertebral muscles', 'C': 'Superficial cervical cellulitis without deep fascial space involvement', 'D': 'Descending necrotizing mediastinitis due to contiguous spread along fascial planes'}",D,ultramedical_mcq,mcq,C. Superficial cervical cellulitis without deep fascial,openllama_3b,mcq_4opt,C,False
+"PubMedQA,20179360","Context: Adipose tissue inflammation induced by macrophage infiltration through the MCP-1/CCR2 pathway is considered to play a pivotal role in the development of visceral obesity and insulin resistance. In the present study, therefore, we examined whether pharmacological inhibition of CCR2 is effective against the development of diet-induced metabolic disorders.
+Context: C57BL/6 mice were fed a high fat and sucrose diet with or without propagermanium (CCR2 inhibitor, 5 or 50 mg/kg BW/day) for 12 weeks from 6 weeks of age. Then we analyzed lipid and glucose metabolism and tissue inflammation in the liver and adipose tissues along with serum markers in those mice.
+Does c-C chemokine receptor 2 inhibitor improve diet-induced development of insulin resistance and hepatic steatosis in mice?","{'A': 'maybe', 'B': 'no', 'C': 'yes'}",C,ultramedical_mcq,mcq,"A
+
+
+A: The answer is A.
+The question is asking",openllama_3b,mcq_4opt,A,False
+"TextBookQA,Cell_Biology_Alberts_596","In the context of molecular interactions and the equilibrium constant (Ka) that denotes ligand-molecule binding strength, a researcher examines the binding affinity of a novel enzyme with a high molecular weight substrate. The substrate is characterized by its bulkiness and the enzyme features a deep binding pocket. Which amino acid alteration in the enzyme could potentially increase the Ka, given that the modification must be situated within the binding pocket and not elsewhere?","{'A': ""Introducing mutations within the binding pocket that increase the entropy of the enzyme's tertiary structure"", 'B': 'Enhancing noncovalent bonds like hydrogen bonds or ionic interactions within the binding pocket', 'C': ""Increasing the enzyme's catalytic rate through mutations that affect the binding pocket indirectly"", 'D': ""Diminishing the enzyme's hydrophobic interactions within the binding pocket while preserving overall stability""}",B,ultramedical_mcq,mcq,C. Increasing the enzyme's catalytic rate through mutations that affect,openllama_3b,mcq_4opt,C,False
+"TextBookQA,Immunology_Janeway_2789","In the specified edition of 'Immunology_Janeway', which chapter explores the molecular intricacies that trigger adaptive immunity, with a focus on dendritic cells' influence on T cell priming, and the subsequent effects on the specificity and efficacy of effector T cells and antibodies in the advanced stages of the immune response, also considering the antigen presentation process?","{'A': 'Chapter 10', 'B': 'Chapter 2', 'C': 'Chapter 11', 'D': 'Chapter 3'}",C,ultramedical_mcq,mcq,"A
+
+
+A: The answer is A.
+The book is titled",openllama_3b,mcq_4opt,A,False
+"PubMedQA,8810954","Context: To evaluate the ability of five quality assurance/ quality improvement audit filters to identify opportunities for improvement in patient care in a mature trauma system.
+Context: Retrospective analysis of prospectively collected data.
+Context: Total patient population at risk and audit filter fallouts were evaluated for the following audit filters: patients with (1) Glasgow Coma Scale (GCS) score < 14 who did not receive a CT scan within 2 hours of admission; (2) subdural/ epidural hematomas who did not undergo craniotomy within 4 hours; (3) open tibial fractures who did not undergo debridement within 8 hours; (4) abdominal gunshot wounds who did not undergo laparotomy within 4 hours; and (5) all deaths where a quality assurance action was taken. The filters were used for 1 year. Mortality was compared between fallouts and nonfallouts in each category and the frequency of corrective actions for each category were determined.
+Context: Corrective actions were taken in 97 of the 418 fallouts from 3,787 patients at risk. The majority (77%) of these actions were for patients in the death audit filter group. There were 343 nondeath fallouts, representing 13% of the 2,719 nondeath patients at risk. Of these, 22 corrective actions were taken, representing 6.4% of the fallouts and less than 1% of the patients at risk.
+Does continuous use of standard process audit filters have limited value in an established trauma system?","{'A': 'yes', 'B': 'maybe', 'C': 'no'}",A,ultramedical_mcq,mcq,"B. maybe
+
+Context: The authors of this study were interested in the",openllama_3b,mcq_4opt,B,False
+"TextBookQA,Neurology_Adams_4111","In a 45-year-old woman with a history of seizures and a confirmed dominant temporal lobe lesion that compromises her language comprehension, which type of aphasia, when paired with the emotional dysregulation evident from an intense episode of anger and confusion, is most consistent with her presentation?","{'A': 'Conduction aphasia with apathy', 'B': ""Broca's aphasia with aggressive behavior"", 'C': 'Global aphasia with depression', 'D': ""Wernicke's aphasia with intense rage reactions""}",D,ultramedical_mcq,mcq,"C
+
+The correct answer is C.
+
+The answer is correct because",openllama_3b,mcq_4opt,C,False
+"PubMedQA,23954484","Context: We aimed to test the hypothesis that slice-by-slice prospective motion correction at 7T using an optical tracking system reduces the rate of false positive activations in an fMRI group study with a paradigm that involves task-correlated motion.
+Context: Brain activation during right leg movement was measured using a block design on 15 volunteers, with and without prospective motion correction. Clearly erroneous activations were compared between both cases, at the individual level. Additionally, conventional group analysis was performed.
+Context: The number of falsely activated voxels with T-values higher than 5 was reduced by 48% using prospective motion correction alone, without additional retrospective realignment. In the group analysis, the statistical power was increased - the peak T-value was 26% greater, and the number of voxels in the cluster representing the right leg was increased by a factor of 9.3.
+Does prospective slice-by-slice motion correction reduce false positive activations in fMRI with task-correlated motion?","{'A': 'no', 'B': 'maybe', 'C': 'yes'}",C,ultramedical_mcq,mcq,"B.
+
+
+A: The answer is B.
+The question is",openllama_3b,mcq_4opt,B,False
+"MedQA,3730","A 5-year-old girl is brought to her pediatrician by her mother. The mother is concerned about a fine, red rash on her daughter’s limbs and easy bruising. The rash started about 1 week ago and has progressed. Past medical history is significant for a minor cold two weeks ago. The girl was born at 39 weeks gestation via spontaneous vaginal delivery. She is up to date on all vaccines and is meeting all developmental milestones. Today, she has a heart rate of 90/min, respiratory rate of 22/min, blood pressure of 110/65 mm Hg, and temperature of 37.0°C (98.6°F). On physical exam, the girl has a petechial rash on her arms and legs. Additionally, there are several bruises on her shins and thighs. A CBC shows thrombocytopenia (20,000/mm3). Other parameters of the CBC are within expected range for her age. Prothrombin time (PT), partial thromboplastin time (PTT), and metabolic panels are all within reference range. What is the most likely blood disorder?","{'A': 'Hemophilia B', 'B': 'Hemophilia A', 'C': 'Immune thrombocytopenic purpura (ITP)', 'D': 'Von Willebrand disease'}",C,ultramedical_mcq,mcq,C. Immune thrombocytopenic purpura (IT,openllama_3b,mcq_4opt,C,True
+"PubMedQA,24376992","Context: To evaluate whether non-closure of the visceral peritoneum after total abdominal hysterectomy (TAH) and bilateral salpingo-oophorectomy (BSO) in patients with uterine corpus carcinoma influences the volume of the small intestine within the irradiated volume during adjuvant radiotherapy or late radiation intestinal toxicity.
+Context: A total of 152 patients after TAH + BSO with adjuvant pelvic radiotherapy were studied. The state of peritonealization was retrospectively evaluated based on surgical protocols. The volume of irradiated bowels was calculated by CT-based delineation in a radiotherapy planning system. The influence of visceral peritonealization upon the volume of the small intestine within the irradiated volume and consequent late morbidity was analyzed.
+Context: Visceral peritonealization was not performed in 70 (46%) of 152 studied patients. The state of peritonealization did not affect the volume of the irradiated small intestine (p = 0.14). Mean volume of bowels irradiated in patients with peritonealization was 488 cm(3) (range 200-840 cm(3), median 469 cm(3)); mean volume of bowels irradiated in patients without peritonealization was 456 cm(3) (range 254-869 cm(3), median 428 cm(3)). We did not prove any significant difference between both arms. Nor did we observe any influence of non-peritonealization upon late intestinal morbidity (p = 0.34).
+Does non-closure of peritoneum after abdominal hysterectomy for uterine carcinoma increase late intestinal radiation morbidity?","{'A': 'maybe', 'B': 'no', 'C': 'yes'}",B,ultramedical_mcq,mcq,"B. no
+
+
+A: The answer is B.
+The question",openllama_3b,mcq_4opt,B,True
+"TextBookQA,InternalMed_Harrison_2209","For a 67-year-old female patient with chronic insomnia, considering the potential for abuse, medication costs, and the necessity to avoid exacerbating her mild cognitive impairment with anticholinergic side effects, which medication should be considered as a first-line treatment?","{'A': 'Benzodiazepine receptor agonists (BzRAs)', 'B': 'Doxepin', 'C': 'Trazodone', 'D': 'Amitriptyline'}",C,ultramedical_mcq,mcq,"C. Trazodone
+
+The correct answer is C. Traz",openllama_3b,mcq_4opt,C,True
+"MedQA-Evol,9484-synthetic-3","In a 26-year-old pregnant asthmatic woman presenting with persistent left lower quadrant abdominal pain, hypotension (77/45 mmHg), tachycardia (pulse 121/min), no vaginal bleeding, and a normal genitourinary exam, which diagnosis is most likely if a transvaginal ultrasound shows an empty uterus?","{'A': 'Ectopic pregnancy', 'B': 'Urinary tract infection', 'C': 'Acute appendicitis', 'D': 'Ovarian torsion'}",A,ultramedical_mcq,mcq,"C. Acute appendicitis
+
+The correct answer is C. Ac",openllama_3b,mcq_4opt,C,False
+"PubMedQA,23965987","Context: Autophagic elimination of defective mitochondria suppresses oxidative stress and preserves mitochondrial function. Here, the essential autophagy gene Atg7 was deleted in a mouse model of BrafV600E-induced lung cancer in the presence or absence of the tumor suppressor Trp53. Atg7 deletion initially induced oxidative stress and accelerated tumor cell proliferation in a manner indistinguishable from Nrf2 ablation. Compound deletion of Atg7 and Nrf2 had no additive effect, suggesting that both genes modulate tumorigenesis by regulating oxidative stress and revealing a potential mechanism of autophagy-mediated tumor suppression. At later stages of tumorigenesis, Atg7 deficiency resulted in an accumulation of defective mitochondria, proliferative defects, reduced tumor burden, conversion of adenomas and adenocarcinomas to oncocytomas, and increased mouse life span. Autophagy-defective tumor-derived cell lines were impaired in their ability to respire and survive starvation and were glutamine-dependent, suggesting that autophagy-supplied substrates from protein degradation sustains BrafV600E tumor growth and metabolism.
+Does autophagy sustain mitochondrial glutamine metabolism and growth of BrafV600E-driven lung tumors?","{'A': 'yes', 'B': 'no', 'C': 'maybe'}",A,ultramedical_mcq,mcq,"B
+
+
+A: The answer is B.
+The question is asking",openllama_3b,mcq_4opt,B,False
+"PubMedQA,23537103","Context: BATF plays important roles in the function of the immune system. Batf null mice are deficient in both CD4+ Th17 cells and T follicular helper cells and possess an intrinsic B cell defect that leads to the complete absence of class switched Ig. In this study, Tg mice overexpressing BATF in T cells were used together with Batf null mice to investigate how altering levels of BATF expression in T cells impacts the development and function of a recently characterized population of iNKT cells expressing IL-17 (iNKT-17).
+Context: BATF has a direct impact on IL-17 expression by iNKT cells. However, in contrast to the Th17 lineage where BATF activates IL-17 expression and leads to the expansion of the lineage, BATF overexpression restricts overall iNKT cell numbers while skewing the compartment in vivo and in vitro toward an iNKT-17 phenotype.
+Does bATF regulate the development and function of IL-17 producing iNKT cells?","{'A': 'maybe', 'B': 'yes', 'C': 'no'}",B,ultramedical_mcq,mcq,"B
+
+
+A: The answer is B.
+The question is asking",openllama_3b,mcq_4opt,B,True
+"PubMedQA,22929738","Context: The role of the hypovolemic component secondary to the microcirculatory changes in the onset of inaugural anaphylactic hypotension remains debated. We investigated the microcirculatory permeability in a model of anaphylactic shock using a fluorescence confocal microscopy imaging system.
+Context: Ovalbumin-sensitized anesthetized Brown Norway rats were randomly allocated into two groups (n = 6/group): control and anaphylaxis, respectively induced by intravenous saline or ovalbumin at time 0 (T0). The mesentery was surgically exposed. Macromolecular fluorescein isothiocyanate-dextran was intravenously injected (T0-5min) allowing in vivo visualization of the mesenteric microvascular network by fluorescence microscopy. After a period of stabilization of the contrast agent concentration, a 5-s movie was recorded to obtain baseline signal intensity. Following T0, 5-s movies were recorded every 30 s for 30 min. Capillary leakage of fluorescein isothiocyanate-dextran was assessed in interstitium and compared between groups. Data are expressed as mean ± SD.
+Context: Following anaphylactic shock onset, an early, progressive, and global signal intensity increase over time was detected in the interstitium. Mean index leakage differed between control and anaphylaxis (respectively 20 ± 11 vs. 170 ± 127%; P < 0.0001), starting at 2 min after shock onset and progressively increasing. Index leakage correlated with the drop in arterial blood pressure until T0 + 10 min (r = -0.75, P = 0.0001).
+Is macromolecular capillary leakage involved in the onset of anaphylactic hypotension?","{'A': 'maybe', 'B': 'yes', 'C': 'no'}",B,ultramedical_mcq,mcq,"A
+
+
+A: The answer is A.
+The question is asking",openllama_3b,mcq_4opt,A,False
+"MedQA-Evol,6832-synthetic-3","In a 45-year-old male with a history of mild hypertension and symptoms including palpitations and dyspnea, a mid-systolic click and late systolic murmur at the apex are noted. Echocardiography reveals mitral valve leaflet prolapse. Which additional finding is most consistent with a diagnosis of mitral valve prolapse, considering the need for a comprehensive assessment of potential connective tissue disorders?","{'A': 'Tricuspid regurgitation, particularly in cases where right-sided heart alterations are present', 'B': 'Aortic stenosis, identified by a pattern of concentric left ventricular hypertrophy', 'C': 'Infective endocarditis, focusing on the presence of vegetations on the mitral or other valve leaflets', 'D': ""Marfan syndrome, considering the patient's systemic features and a relevant family history""}",D,ultramedical_mcq,mcq,"C. Infective endocarditis, focusing on the presence of veget",openllama_3b,mcq_4opt,C,False
+"MedMCQA,137749",68-years-old man weighing 60 kg has plasma creatinine 3mg/dL. What will be creatinine clearance?,"{'A': '10', 'B': '20', 'C': '30', 'D': '40'}",B,ultramedical_mcq,mcq,"C
+
+The correct answer is 30.
+
+The creatin",openllama_3b,mcq_4opt,C,False
+"MedMCQA,122558",The permissible concentration of fluorides in drinking water is,"{'A': '1.5 - 2.5', 'B': '2-Jan', 'C': '0.5 - 0.8', 'D': '0.1 - 0.2'}",C,ultramedical_mcq,mcq,"C
+
+
+A: The correct answer is C.
+The permiss",openllama_3b,mcq_4opt,C,True
+"MedQA-Evol,7489-synthetic-6","In the context of a 10-week gestational age and the critical window of organogenesis, which teratogenic effect of carbamazepine would most likely manifest in the developing embryo, considering the drug's known spectrum of teratogenicity?","{'A': 'Cleft lip and palate, with or without cleft palate alone', 'B': 'Neural tube defects, particularly spina bifida', 'C': 'Limb malformations, including but not limited to polydactyly', 'D': 'Congenital heart defects, specifically ventricular septal defects'}",B,ultramedical_mcq,mcq,"C
+
+The correct answer is C.
+
+The teratogenic effect",openllama_3b,mcq_4opt,C,False
+"MedMCQA,129119",All are true about extra lobar pulmonary sequestration except:,"{'A': 'More common in males', 'B': 'Surrounded by seperate pleural covering', 'C': 'Associated with multiple other anomalies', 'D': 'Removed by either segmentectomy or lobectomy'}",D,ultramedical_mcq,mcq,"D
+
+
+A: The answer is D.
+Extra lobar pul",openllama_3b,mcq_4opt,D,True
