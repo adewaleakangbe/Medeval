@@ -1,1 +1,0 @@
-"""Abstract model interface."""
