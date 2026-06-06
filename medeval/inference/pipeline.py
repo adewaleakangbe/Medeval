@@ -1,0 +1,1 @@
+"""Batched inference pipeline runner."""
