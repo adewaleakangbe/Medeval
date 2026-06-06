@@ -1,0 +1,98 @@
+# =============================================================================
+# MedEval — Master Evaluation Configuration
+# =============================================================================
+# Every parameter that affects a run lives here.
+# To reproduce any result, share this file exactly as-is.
+# Never hardcode values in Python — always reference this config.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Reproducibility
+# ---------------------------------------------------------------------------
+seed: 42
+
+# ---------------------------------------------------------------------------
+# Dataset configuration
+# ---------------------------------------------------------------------------
+datasets:
+  medqa_usmle_4opt:
+    hf_path: "GBaker/MedQA-USMLE-4-options"   # HuggingFace dataset ID
+    split: "test"                               # Evaluate on the test split
+    max_samples: null                           # null = use all samples; set int to limit (e.g. 100 for debugging)
+    prompt_style: "mcq_4opt"                    # Maps to a formatter in data/formatter.py
+
+  # Placeholder for Phase 2 — uncomment when ready
+  # ultramedical_10pct:
+  #   hf_path: "TsinghuaC3I/UltraMedical"
+  #   split: "train"
+  #   max_samples: null
+  #   sample_fraction: 0.10                     # Use 10% of the split
+  #   prompt_style: "mcq_4opt"
+
+# ---------------------------------------------------------------------------
+# Model registry
+# ---------------------------------------------------------------------------
+# Add or remove models here without touching any Python code.
+# Each entry maps a short alias to a HuggingFace model ID and load settings.
+# ---------------------------------------------------------------------------
+models:
+  gemma3_4b:
+    hf_id: "google/gemma-3-4b-it"
+    dtype: "bfloat16"                           # bfloat16 | float16 | float32
+    load_in_4bit: false                         # Enable for GPUs with <12GB VRAM
+    load_in_8bit: false
+    device_map: "auto"                          # auto | cuda:0 | cpu
+    max_new_tokens: 16                          # Short for MCQ answer extraction
+    trust_remote_code: false
+
+  medgemma_4b:
+    hf_id: "google/medgemma-4b-it"
+    dtype: "bfloat16"
+    load_in_4bit: false
+    load_in_8bit: false
+    device_map: "auto"
+    max_new_tokens: 16
+    trust_remote_code: false
+
+  openbiollm_8b:
+    hf_id: "aaditya/Llama3-OpenBioLLM-8B"      # Lighter variant; swap to 70B if VRAM allows
+    dtype: "bfloat16"
+    load_in_4bit: true                          # 70B needs 4-bit quantisation on single GPU
+    load_in_8bit: false
+    device_map: "auto"
+    max_new_tokens: 16
+    trust_remote_code: false
+
+  openllama_3b:
+    hf_id: "openlm-research/open_llama_3b_v2"
+    dtype: "float16"
+    load_in_4bit: false
+    load_in_8bit: false
+    device_map: "auto"
+    max_new_tokens: 16
+    trust_remote_code: false
+
+# ---------------------------------------------------------------------------
+# Inference settings
+# ---------------------------------------------------------------------------
+inference:
+  batch_size: 8                                 # Reduce if OOM errors occur
+  do_sample: false                              # Greedy decoding for reproducibility
+  temperature: 1.0                              # Ignored when do_sample=false
+  top_p: 1.0                                    # Ignored when do_sample=false
+
+# ---------------------------------------------------------------------------
+# Evaluation settings
+# ---------------------------------------------------------------------------
+evaluation:
+  answer_choices: ["A", "B", "C", "D"]         # Expected answer tokens for 4-option MCQ
+  extract_strategy: "first_token"               # first_token | regex | logprobs
+
+# ---------------------------------------------------------------------------
+# Output settings
+# ---------------------------------------------------------------------------
+output:
+  results_dir: "results/runs"                   # Relative to project root
+  save_per_sample: true                         # Save individual sample predictions (useful for error analysis)
+  save_summary: true                            # Save per-model aggregate summary
+  formats: ["json", "csv"]                      # Output formats
