@@ -1,0 +1,46 @@
+{
+  "model_alias": "medgemma_4b",
+  "dataset_name": "ultramedical_mcq",
+  "n_total": 14918,
+  "n_correct": 12023,
+  "accuracy": 0.8059,
+  "accuracy_pct": 80.59,
+  "n_extraction_failed": 0,
+  "extraction_failure_rate": 0.0,
+  "per_option_accuracy": {
+    "A": {
+      "total": 4115,
+      "correct": 3503,
+      "accuracy": 0.8513
+    },
+    "B": {
+      "total": 4132,
+      "correct": 3440,
+      "accuracy": 0.8325
+    },
+    "C": {
+      "total": 4094,
+      "correct": 3342,
+      "accuracy": 0.8163
+    },
+    "D": {
+      "total": 2577,
+      "correct": 1738,
+      "accuracy": 0.6744
+    }
+  },
+  "prediction_distribution": {
+    "D": 2145,
+    "A": 4611,
+    "B": 4155,
+    "C": 4007
+  },
+  "total_samples": 14918,
+  "total_time_s": 2240.422,
+  "throughput_sps": 6.659,
+  "latency_mean_s": 0.1502,
+  "latency_median_s": 0.1493,
+  "latency_p95_s": 0.174,
+  "latency_min_s": 0.1103,
+  "latency_max_s": 0.2467
+}

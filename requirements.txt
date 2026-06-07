@@ -24,9 +24,12 @@ bitsandbytes>=0.43.0
 
 # Evaluation and numerical
 numpy>=1.26.0
+bert-score>=0.3.13 
 
 # Config
 pyyaml>=6.0.1
 
 # Utilities
 tqdm>=4.66.0                # Progress bars in HuggingFace internals
+
+# pip install sentencepiece tiktoken

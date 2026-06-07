@@ -1,0 +1,47 @@
+{
+  "model_alias": "openbiollm_8b",
+  "dataset_name": "medqa_usmle_4opt",
+  "n_total": 1273,
+  "n_correct": 672,
+  "accuracy": 0.5279,
+  "accuracy_pct": 52.79,
+  "n_extraction_failed": 36,
+  "extraction_failure_rate": 0.0283,
+  "per_option_accuracy": {
+    "A": {
+      "total": 353,
+      "correct": 192,
+      "accuracy": 0.5439
+    },
+    "B": {
+      "total": 309,
+      "correct": 135,
+      "accuracy": 0.4369
+    },
+    "C": {
+      "total": 346,
+      "correct": 204,
+      "accuracy": 0.5896
+    },
+    "D": {
+      "total": 265,
+      "correct": 141,
+      "accuracy": 0.5321
+    }
+  },
+  "prediction_distribution": {
+    "A": 346,
+    "B": 229,
+    "D": 316,
+    "C": 346,
+    "FAILED": 36
+  },
+  "total_samples": 1273,
+  "total_time_s": 255.708,
+  "throughput_sps": 4.978,
+  "latency_mean_s": 0.2038,
+  "latency_median_s": 0.1972,
+  "latency_p95_s": 0.2545,
+  "latency_min_s": 0.11,
+  "latency_max_s": 0.737
+}

@@ -1,0 +1,47 @@
+{
+  "model_alias": "openbiollm_8b",
+  "dataset_name": "ultramedical_mcq",
+  "n_total": 14918,
+  "n_correct": 11247,
+  "accuracy": 0.7539,
+  "accuracy_pct": 75.39,
+  "n_extraction_failed": 955,
+  "extraction_failure_rate": 0.064,
+  "per_option_accuracy": {
+    "A": {
+      "total": 4115,
+      "correct": 3160,
+      "accuracy": 0.7679
+    },
+    "B": {
+      "total": 4132,
+      "correct": 2990,
+      "accuracy": 0.7236
+    },
+    "C": {
+      "total": 4094,
+      "correct": 3255,
+      "accuracy": 0.7951
+    },
+    "D": {
+      "total": 2577,
+      "correct": 1842,
+      "accuracy": 0.7148
+    }
+  },
+  "prediction_distribution": {
+    "C": 3980,
+    "A": 4007,
+    "B": 3458,
+    "D": 2518,
+    "FAILED": 955
+  },
+  "total_samples": 14918,
+  "total_time_s": 3333.809,
+  "throughput_sps": 4.475,
+  "latency_mean_s": 0.2235,
+  "latency_median_s": 0.2229,
+  "latency_p95_s": 0.2704,
+  "latency_min_s": 0.1367,
+  "latency_max_s": 0.3865
+}

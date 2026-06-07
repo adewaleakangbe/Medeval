@@ -1,0 +1,46 @@
+{
+  "model_alias": "medgemma_4b",
+  "dataset_name": "medqa_usmle_4opt",
+  "n_total": 1273,
+  "n_correct": 694,
+  "accuracy": 0.5452,
+  "accuracy_pct": 54.52,
+  "n_extraction_failed": 0,
+  "extraction_failure_rate": 0.0,
+  "per_option_accuracy": {
+    "A": {
+      "total": 353,
+      "correct": 219,
+      "accuracy": 0.6204
+    },
+    "B": {
+      "total": 309,
+      "correct": 177,
+      "accuracy": 0.5728
+    },
+    "C": {
+      "total": 346,
+      "correct": 192,
+      "accuracy": 0.5549
+    },
+    "D": {
+      "total": 265,
+      "correct": 106,
+      "accuracy": 0.4
+    }
+  },
+  "prediction_distribution": {
+    "A": 418,
+    "B": 337,
+    "C": 321,
+    "D": 197
+  },
+  "total_samples": 1273,
+  "total_time_s": 183.938,
+  "throughput_sps": 6.921,
+  "latency_mean_s": 0.1481,
+  "latency_median_s": 0.1425,
+  "latency_p95_s": 0.1664,
+  "latency_min_s": 0.1226,
+  "latency_max_s": 0.7973
+}

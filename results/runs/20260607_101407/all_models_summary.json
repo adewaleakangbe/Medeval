@@ -1,0 +1,250 @@
+[
+  {
+    "model_alias": "gemma3_4b",
+    "dataset_name": "medqa_usmle_4opt",
+    "n_total": 1273,
+    "n_correct": 565,
+    "accuracy": 0.4438,
+    "accuracy_pct": 44.38,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 353,
+        "correct": 273,
+        "accuracy": 0.7734
+      },
+      "B": {
+        "total": 309,
+        "correct": 96,
+        "accuracy": 0.3107
+      },
+      "C": {
+        "total": 346,
+        "correct": 139,
+        "accuracy": 0.4017
+      },
+      "D": {
+        "total": 265,
+        "correct": 57,
+        "accuracy": 0.2151
+      }
+    },
+    "prediction_distribution": {
+      "A": 734,
+      "C": 245,
+      "B": 176,
+      "D": 118
+    },
+    "total_samples": 1273,
+    "total_time_s": 185.002,
+    "throughput_sps": 6.881,
+    "latency_mean_s": 0.1489,
+    "latency_median_s": 0.1427,
+    "latency_p95_s": 0.17,
+    "latency_min_s": 0.1238,
+    "latency_max_s": 0.792
+  },
+  {
+    "model_alias": "medgemma_4b",
+    "dataset_name": "medqa_usmle_4opt",
+    "n_total": 1273,
+    "n_correct": 694,
+    "accuracy": 0.5452,
+    "accuracy_pct": 54.52,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 353,
+        "correct": 219,
+        "accuracy": 0.6204
+      },
+      "B": {
+        "total": 309,
+        "correct": 177,
+        "accuracy": 0.5728
+      },
+      "C": {
+        "total": 346,
+        "correct": 192,
+        "accuracy": 0.5549
+      },
+      "D": {
+        "total": 265,
+        "correct": 106,
+        "accuracy": 0.4
+      }
+    },
+    "prediction_distribution": {
+      "A": 418,
+      "B": 337,
+      "C": 321,
+      "D": 197
+    },
+    "total_samples": 1273,
+    "total_time_s": 183.938,
+    "throughput_sps": 6.921,
+    "latency_mean_s": 0.1481,
+    "latency_median_s": 0.1425,
+    "latency_p95_s": 0.1664,
+    "latency_min_s": 0.1226,
+    "latency_max_s": 0.7973
+  },
+  {
+    "model_alias": "gemma3_4b",
+    "dataset_name": "ultramedical_mcq",
+    "n_total": 14918,
+    "n_correct": 10778,
+    "accuracy": 0.7225,
+    "accuracy_pct": 72.25,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 4115,
+        "correct": 3646,
+        "accuracy": 0.886
+      },
+      "B": {
+        "total": 4132,
+        "correct": 2828,
+        "accuracy": 0.6844
+      },
+      "C": {
+        "total": 4094,
+        "correct": 2937,
+        "accuracy": 0.7174
+      },
+      "D": {
+        "total": 2577,
+        "correct": 1367,
+        "accuracy": 0.5305
+      }
+    },
+    "prediction_distribution": {
+      "A": 6128,
+      "B": 3452,
+      "C": 3677,
+      "D": 1661
+    },
+    "total_samples": 14918,
+    "total_time_s": 2235.912,
+    "throughput_sps": 6.672,
+    "latency_mean_s": 0.1499,
+    "latency_median_s": 0.1492,
+    "latency_p95_s": 0.1739,
+    "latency_min_s": 0.1097,
+    "latency_max_s": 0.2483
+  },
+  {
+    "model_alias": "medgemma_4b",
+    "dataset_name": "ultramedical_mcq",
+    "n_total": 14918,
+    "n_correct": 12023,
+    "accuracy": 0.8059,
+    "accuracy_pct": 80.59,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 4115,
+        "correct": 3503,
+        "accuracy": 0.8513
+      },
+      "B": {
+        "total": 4132,
+        "correct": 3440,
+        "accuracy": 0.8325
+      },
+      "C": {
+        "total": 4094,
+        "correct": 3342,
+        "accuracy": 0.8163
+      },
+      "D": {
+        "total": 2577,
+        "correct": 1738,
+        "accuracy": 0.6744
+      }
+    },
+    "prediction_distribution": {
+      "D": 2145,
+      "A": 4611,
+      "B": 4155,
+      "C": 4007
+    },
+    "total_samples": 14918,
+    "total_time_s": 2240.422,
+    "throughput_sps": 6.659,
+    "latency_mean_s": 0.1502,
+    "latency_median_s": 0.1493,
+    "latency_p95_s": 0.174,
+    "latency_min_s": 0.1103,
+    "latency_max_s": 0.2467
+  },
+  {
+    "model_alias": "gemma3_4b",
+    "dataset_name": "ultramedical_preference",
+    "eval_type": "preference",
+    "n_total": 5467,
+    "rouge_pas": 0.3772,
+    "rouge_pas_pct": 37.72,
+    "rouge_n_aligned": 2054,
+    "mean_rouge_chosen": 0.048,
+    "mean_rouge_rejected": 0.0581,
+    "mean_rouge_delta": -0.01,
+    "bertscore_available": true,
+    "bert_pas": 0.3833,
+    "bert_pas_pct": 38.33,
+    "bert_n_aligned": 2095,
+    "mean_bert_chosen": 0.8187,
+    "mean_bert_rejected": 0.8226,
+    "mean_bert_delta": -0.0039,
+    "preference_alignment_score": 0.3802,
+    "pas_pct": 38.02,
+    "n_aligned_with_chosen": 1338,
+    "n_aligned_with_rejected": 2639,
+    "n_tied": 1480,
+    "total_samples": 5467,
+    "total_time_s": 716.735,
+    "throughput_sps": 7.628,
+    "latency_mean_s": 0.1313,
+    "latency_median_s": 0.1283,
+    "latency_p95_s": 0.1552,
+    "latency_min_s": 0.1081,
+    "latency_max_s": 0.3273
+  },
+  {
+    "model_alias": "medgemma_4b",
+    "dataset_name": "ultramedical_preference",
+    "eval_type": "preference",
+    "n_total": 5467,
+    "rouge_pas": 0.3773,
+    "rouge_pas_pct": 37.73,
+    "rouge_n_aligned": 2056,
+    "mean_rouge_chosen": 0.0555,
+    "mean_rouge_rejected": 0.0671,
+    "mean_rouge_delta": -0.0116,
+    "bertscore_available": true,
+    "bert_pas": 0.3789,
+    "bert_pas_pct": 37.89,
+    "bert_n_aligned": 2071,
+    "mean_bert_chosen": 0.8253,
+    "mean_bert_rejected": 0.8295,
+    "mean_bert_delta": -0.0042,
+    "preference_alignment_score": 0.3781,
+    "pas_pct": 37.81,
+    "n_aligned_with_chosen": 1369,
+    "n_aligned_with_rejected": 2695,
+    "n_tied": 1396,
+    "total_samples": 5467,
+    "total_time_s": 717.601,
+    "throughput_sps": 7.618,
+    "latency_mean_s": 0.1314,
+    "latency_median_s": 0.1282,
+    "latency_p95_s": 0.1583,
+    "latency_min_s": 0.1047,
+    "latency_max_s": 0.2968
+  }
+]
