@@ -87,6 +87,15 @@ models:
     max_new_tokens: 16
     trust_remote_code: false
 
+  biomistral_7b:
+    hf_id: "BioMistral/BioMistral-7B"
+    dtype: "bfloat16"
+    load_in_4bit: true      # 7B needs 4-bit on 16GB VRAM alongside other models
+    load_in_8bit: false
+    device_map: "auto"
+    max_new_tokens: 16
+    trust_remote_code: false
+
 # ---------------------------------------------------------------------------
 # Inference settings
 # ---------------------------------------------------------------------------

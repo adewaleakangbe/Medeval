@@ -1,0 +1,46 @@
+{
+  "model_alias": "biomistral_7b",
+  "dataset_name": "ultramedical_mcq",
+  "n_total": 14918,
+  "n_correct": 10634,
+  "accuracy": 0.7128,
+  "accuracy_pct": 71.28,
+  "n_extraction_failed": 0,
+  "extraction_failure_rate": 0.0,
+  "per_option_accuracy": {
+    "A": {
+      "total": 4115,
+      "correct": 2884,
+      "accuracy": 0.7009
+    },
+    "B": {
+      "total": 4132,
+      "correct": 2939,
+      "accuracy": 0.7113
+    },
+    "C": {
+      "total": 4094,
+      "correct": 3044,
+      "accuracy": 0.7435
+    },
+    "D": {
+      "total": 2577,
+      "correct": 1767,
+      "accuracy": 0.6857
+    }
+  },
+  "prediction_distribution": {
+    "B": 4051,
+    "D": 2747,
+    "A": 3863,
+    "C": 4257
+  },
+  "total_samples": 14918,
+  "total_time_s": 3768.439,
+  "throughput_sps": 3.959,
+  "latency_mean_s": 0.2526,
+  "latency_median_s": 0.2508,
+  "latency_p95_s": 0.3037,
+  "latency_min_s": 0.1602,
+  "latency_max_s": 0.4868
+}

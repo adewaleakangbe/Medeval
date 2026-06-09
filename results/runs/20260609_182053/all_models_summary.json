@@ -1,0 +1,126 @@
+[
+  {
+    "model_alias": "biomistral_7b",
+    "dataset_name": "medqa_usmle_4opt",
+    "n_total": 1273,
+    "n_correct": 559,
+    "accuracy": 0.4391,
+    "accuracy_pct": 43.91,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 353,
+        "correct": 151,
+        "accuracy": 0.4278
+      },
+      "B": {
+        "total": 309,
+        "correct": 134,
+        "accuracy": 0.4337
+      },
+      "C": {
+        "total": 346,
+        "correct": 148,
+        "accuracy": 0.4277
+      },
+      "D": {
+        "total": 265,
+        "correct": 126,
+        "accuracy": 0.4755
+      }
+    },
+    "prediction_distribution": {
+      "A": 280,
+      "B": 310,
+      "D": 362,
+      "C": 321
+    },
+    "total_samples": 1273,
+    "total_time_s": 311.611,
+    "throughput_sps": 4.085,
+    "latency_mean_s": 0.2457,
+    "latency_median_s": 0.2413,
+    "latency_p95_s": 0.3071,
+    "latency_min_s": 0.1589,
+    "latency_max_s": 0.4127
+  },
+  {
+    "model_alias": "biomistral_7b",
+    "dataset_name": "ultramedical_mcq",
+    "n_total": 14918,
+    "n_correct": 10634,
+    "accuracy": 0.7128,
+    "accuracy_pct": 71.28,
+    "n_extraction_failed": 0,
+    "extraction_failure_rate": 0.0,
+    "per_option_accuracy": {
+      "A": {
+        "total": 4115,
+        "correct": 2884,
+        "accuracy": 0.7009
+      },
+      "B": {
+        "total": 4132,
+        "correct": 2939,
+        "accuracy": 0.7113
+      },
+      "C": {
+        "total": 4094,
+        "correct": 3044,
+        "accuracy": 0.7435
+      },
+      "D": {
+        "total": 2577,
+        "correct": 1767,
+        "accuracy": 0.6857
+      }
+    },
+    "prediction_distribution": {
+      "B": 4051,
+      "D": 2747,
+      "A": 3863,
+      "C": 4257
+    },
+    "total_samples": 14918,
+    "total_time_s": 3768.439,
+    "throughput_sps": 3.959,
+    "latency_mean_s": 0.2526,
+    "latency_median_s": 0.2508,
+    "latency_p95_s": 0.3037,
+    "latency_min_s": 0.1602,
+    "latency_max_s": 0.4868
+  },
+  {
+    "model_alias": "biomistral_7b",
+    "dataset_name": "ultramedical_preference",
+    "eval_type": "preference",
+    "n_total": 5467,
+    "rouge_pas": 0.3849,
+    "rouge_pas_pct": 38.49,
+    "rouge_n_aligned": 2074,
+    "mean_rouge_chosen": 0.0409,
+    "mean_rouge_rejected": 0.0482,
+    "mean_rouge_delta": -0.0073,
+    "bertscore_available": true,
+    "bert_pas": 0.3845,
+    "bert_pas_pct": 38.45,
+    "bert_n_aligned": 2102,
+    "mean_bert_chosen": 0.8236,
+    "mean_bert_rejected": 0.8274,
+    "mean_bert_delta": -0.0038,
+    "preference_alignment_score": 0.3847,
+    "pas_pct": 38.47,
+    "n_aligned_with_chosen": 1365,
+    "n_aligned_with_rejected": 2595,
+    "n_tied": 1468,
+    "total_samples": 5467,
+    "total_time_s": 1140.93,
+    "throughput_sps": 4.792,
+    "latency_mean_s": 0.2089,
+    "latency_median_s": 0.2011,
+    "latency_p95_s": 0.2672,
+    "latency_min_s": 0.1556,
+    "latency_max_s": 0.414
+  }
+]

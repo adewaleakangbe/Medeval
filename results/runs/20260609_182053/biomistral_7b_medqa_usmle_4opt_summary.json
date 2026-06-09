@@ -1,0 +1,46 @@
+{
+  "model_alias": "biomistral_7b",
+  "dataset_name": "medqa_usmle_4opt",
+  "n_total": 1273,
+  "n_correct": 559,
+  "accuracy": 0.4391,
+  "accuracy_pct": 43.91,
+  "n_extraction_failed": 0,
+  "extraction_failure_rate": 0.0,
+  "per_option_accuracy": {
+    "A": {
+      "total": 353,
+      "correct": 151,
+      "accuracy": 0.4278
+    },
+    "B": {
+      "total": 309,
+      "correct": 134,
+      "accuracy": 0.4337
+    },
+    "C": {
+      "total": 346,
+      "correct": 148,
+      "accuracy": 0.4277
+    },
+    "D": {
+      "total": 265,
+      "correct": 126,
+      "accuracy": 0.4755
+    }
+  },
+  "prediction_distribution": {
+    "A": 280,
+    "B": 310,
+    "D": 362,
+    "C": 321
+  },
+  "total_samples": 1273,
+  "total_time_s": 311.611,
+  "throughput_sps": 4.085,
+  "latency_mean_s": 0.2457,
+  "latency_median_s": 0.2413,
+  "latency_p95_s": 0.3071,
+  "latency_min_s": 0.1589,
+  "latency_max_s": 0.4127
+}
